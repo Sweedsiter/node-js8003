@@ -1,8 +1,7 @@
 const express = require("express");
-const router = require("./Routes/router");
 const app = express();
 const port = 8003;
-
+require("dotenv").config();
 // map file controller
 const { readdirSync } = require("fs");
 readdirSync("./Routes").map((r) => app.use(require("./Routes/" + r)));
