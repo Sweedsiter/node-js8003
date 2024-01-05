@@ -4,24 +4,10 @@
   <%- include('./head'); %>
 </head>
 <link href="/css/home.css" rel="stylesheet" type="text/css">
-<body class="container">
-   
-<header>
+<body class="main <%= key %> "> 
     <%- include('./header'); %>
-
-</header>
-
-<main>
-    <form  method="post" action="/addHeader">
-        <input name='heaterContact' placeholder="Logo Name">
-        <input name='links' placeholder="links Name">
-        <button type='submit'>Submit</button>
-    </form>
-</main>
-
+<main></main>
 <footer></footer>
-
-</nav>
 </body>
-<script src="/client.js"></script> 
+<script src="/client.js"></script>
 </html>

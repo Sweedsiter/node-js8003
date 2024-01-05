@@ -2,7 +2,7 @@
 
 exports.home = async (req, res) => {
   await res.render("index", {
-    key: "red",
+    key: "black",
   });
   console.log("Hello " + req.url + " home");
   // console.log(process.env.WEATER_API_KEY);
