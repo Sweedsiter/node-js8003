@@ -1,8 +1,18 @@
 const express = require("express");
 const app = express();
 const port = 8003;
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
 require("dotenv").config();
 const path = require("path");
+app.use(express.urlencoded({ extended: false }));
+
+// ระบบ Login
+
+app.use(
+  session({ secret: "mysession", resave: false, saveUninitialized: false }),
+);
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 // map file controller

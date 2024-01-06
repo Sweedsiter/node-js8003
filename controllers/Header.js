@@ -11,14 +11,15 @@ exports.addhaeder = async (req, res) => {
   await fs.writeFile(
     `./views/header.ejs`,
     `
+    <link href="/css/Header.css" rel="stylesheet" type="text/css">
     <header class= "header" style="color:${color};background-color:${bg_color}" >
-        <div class="logo " style="color:${color}" name="F_logoname"><h3>${heaterContact}</h3></div>
+        <div class="logo " style="color:${color}" name="F_logoname"><h3> <a href="/" style="color:#fffafa" >${heaterContact}</a></h3></div>
         <div class="links" >
            <a href="/" style="color:${color}" >${links1}</a>
            <a href="/product" style="color:${color}">${links2}</a>
            <a href="/about" style="color:${color}">${links3}</a>
            <a href="contact" style="color:${color}">${links4}</a>            
-           <a href="/addmin" style="color:${color}"> <i class="fa-regular fa-user" style="color:${color}>Addmin</i></a>  
+           <a href="/dashboard" style="color:${color}"><i class="fa-solid fa-user"></i></a>  
         </div>
      </header>
      <script src="/client.js"></script>
@@ -32,12 +33,7 @@ exports.addhaeder = async (req, res) => {
     if (rer) {
       console.log("เกิดผิตพลาด", rer);
     } else {
-      res.redirect("/");
+      res.redirect("/dashboard");
     }
   });
-};
-
-exports.addmin = async (req, res) => {
-  res.render("Form");
-  console.log(req.params);
 };
