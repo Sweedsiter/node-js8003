@@ -1,12 +1,20 @@
-<form  method="post" action="/addHeader">
+<link href="/css/Headeredit.css" rel="stylesheet" type="text/css">
+<form  method="post" action="/addHeader" class="Headeredit">
+    <h4>Header Edit</h4>
+    <br/>
+    <p>แก้ไข สำหรับ หัวข้อกดเข้า และ ชื่อ-โลโก้ </p>
+    <header><%- include('../header'); %></header>   
     <input name='heaterContact' placeholder="Company Name" required>
     <input name='links1' placeholder="Home" required>
     <input name='links2' placeholder="Products" required>
     <input name='links3' placeholder="About" required>
-    <input name='links4' placeholder="Contact" required>
+    <input name='links4' placeholder="Contact" required> <br/>
     <input name='color' type='color' value="black">font-color</input>
     <input name='bg_color' type='color' value="#FFFFFF">Bg-color</input>
-    <button type='submit'>Submit</button>
-    <a href="/" style="">Back</a>  
+    <br/>
+  <div>
+    <button type='submit'>Save</button>
+    <!-- <a href="/" style="">กลับหน้าแรก</a>   -->
+  </div>
 </form>
 <script src="/client.js"></script>

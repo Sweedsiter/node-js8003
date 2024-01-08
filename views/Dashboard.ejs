@@ -3,13 +3,36 @@
 <head>
   <%- include('./head'); %>
 </head>
-<link href="/css/home.css" rel="stylesheet" type="text/css">
-<body class='contener' > 
+<link href="/css/Dashboard.css" rel="stylesheet" type="text/css">
+<body class='MainDB' > 
     <header><%- include('./header'); %></header>    
-    <div>Dashboard     
-      <div><%- include('./Head/Headeredit'); %></div>
+    <div class="Dashboard">
+
+      <!-- Left Contents -->
+      <div class='L'>
+        <h1>Main Dashboard</h1>
+        <br/>        
+        <div>
+          <p> <i class="fa-regular fa-pen-to-square icon"></i><a href="#">แก้ไข ชื่อและ หน้าเว็บ ></a></p>         
+        </div>
+        <div>
+          <p> <i class="fa-regular fa-pen-to-square icon"></i><a href="#">แก้ไข หน้าเว็บ ></a></p>         
+        </div>
+        <div>
+          <p> <i class="fa-regular fa-pen-to-square icon"></i><a href="#">แก้ไข Product></a></p>         
+        </div>
+        <div>
+          <p> <i class="fa-regular fa-pen-to-square icon"></i><a href="#">แก้ไข About ></a></p>         
+        </div>
+        <div>
+          <p> <i class="fa-regular fa-pen-to-square icon"></i><a href="#">แก้ไข Contact ></a></p>         
+        </div>         
+     </div>   
+
+     <!-- Right Contents -->
+      <div class='R'><%- include('./Head/Headeredit'); %></div>
     </div>
-    <a href="/logout">out</a>
+    <button class="btn"><a href="/logout">ออกจากระบบ</a></button>
 </body>
 <script src="/client.js"></script>
 </html>

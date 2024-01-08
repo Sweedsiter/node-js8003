@@ -1,0 +1,52 @@
+.MainDB {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.MainDB .Dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.MainDB .Dashboard .L {
+  margin: 2rem 3rem 2rem 0rem;
+}
+.MainDB .Dashboard > .L > div {
+  padding: 1.5rem;
+  margin-bottom: -2.5rem;
+}
+.MainDB .Dashboard > .L > div a {
+  color: black;
+  margin-left: 0.4rem;
+}
+
+.MainDB .Dashboard .R {
+}
+.MainDB .btn {
+  border: 1px solid black;
+  width: fit-content;
+  align-self: center;
+  color: black;
+  transition: 0.2s;
+}
+.MainDB .btn:hover {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: rgb(245, 241, 235);
+}
+.MainDB .btn > a {
+  color: black;
+}
+/* media */
+@media only screen and (max-width: 600px) {
+  .MainDB .Dashboard {
+    flex-direction: column;
+  }
+  .MainDB .Dashboard .L {
+    width: 100%;
+    margin: 2rem 1rem 3rem 0rem;
+    left: 0;
+  }
+}
