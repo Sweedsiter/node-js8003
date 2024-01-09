@@ -2,11 +2,15 @@ const express = require("express");
 const router = express.Router();
 const { addhaeder } = require("../controllers/Header");
 const { home } = require("../controllers/controller");
+const fs = require("fs");
 
 router.get("/", home);
 
 router.get("/product", (req, res) => {
   res.render("Product");
+  fs.unlink("./public/avatar/logo/idea.png", function () {
+    console.log("File deleted!");
+  });
 });
 router.get("/about", (req, res) => {
   res.render("About");
@@ -37,7 +41,6 @@ router.post("/login", (req, res) => {
 });
 
 // Dashboard Addmin
-
 router.get("/dashboard", (req, res) => {
   if (req.session.login) {
     res.render("Dashboard");

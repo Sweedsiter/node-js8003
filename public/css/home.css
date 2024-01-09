@@ -1,12 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: 0;
+}
+body {
+  width: 100%;
 }
 .contener {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 .contener > .content {
   border: 1px solid gray;
