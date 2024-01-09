@@ -9,6 +9,7 @@ exports.addhaeder = async (req, res) => {
   const color = req.body.color;
   const bg_color = req.body.bg_color;
 
+  // สร้าง Header จอใหญ่
   await fs.writeFile(
     `./views/header.ejs`,
     `
@@ -30,6 +31,8 @@ exports.addhaeder = async (req, res) => {
       console.log(`Add header เรียบร้อย`);
     },
   );
+
+  // สร้าง Header mobile
   await fs.writeFile(
     `./views/Head/Nav.ejs`,
     `
@@ -44,7 +47,7 @@ exports.addhaeder = async (req, res) => {
         <a href="/product" style="color:${color}">${links2}</a>
         <a href="/about" style="color:${color}">${links3}</a>
         <a href="contact" style="color:${color}">${links4}</a>            
-        <a href="/dashboard" style="color:${color}"><i class="fa-solid fa-user"></i>addmin</a>  
+        <a href="/dashboard" style="color:${color}"><i class="fa-solid fa-user icon"></i>Dashboard</a>  
      </div>
      <script>
         function gettext() {            
@@ -53,13 +56,13 @@ exports.addhaeder = async (req, res) => {
         }   
       </script>
 </div>
-
    `,
     function (err) {
       if (err) throw err;
-      console.log(`Add header เรียบร้อย`);
+      console.log(`Add header mobile เรียบร้อย`);
     },
   );
+
   await fs.readFile("./views/header.ejs", "utf-8", function (rer, data) {
     if (rer) {
       console.log("เกิดผิตพลาด", rer);

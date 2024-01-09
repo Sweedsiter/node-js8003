@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
-
+.addmin {
+  margin-top: 0rem;
+}
 .body {
   display: flex;
   align-items: center;
@@ -28,12 +30,10 @@
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
 }
-
 form {
   display: flex;
   flex-direction: column;
 }
-
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -126,4 +126,9 @@ button:hover {
   text-align: center;
   margin-top: 30px;
   color: #fff;
+}
+@media only screen and (max-width: 600px) {
+  .addmin .body {
+    margin-top: -4rem;
+  }
 }
