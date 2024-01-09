@@ -8,6 +8,7 @@ exports.addhaeder = async (req, res) => {
   const links4 = req.body.links4;
   const color = req.body.color;
   const bg_color = req.body.bg_color;
+
   await fs.writeFile(
     `./views/header.ejs`,
     `
@@ -23,6 +24,36 @@ exports.addhaeder = async (req, res) => {
         </div>
      </header>
      <script src="/client.js"></script>
+   `,
+    function (err) {
+      if (err) throw err;
+      console.log(`Add header เรียบร้อย`);
+    },
+  );
+  await fs.writeFile(
+    `./views/Head/Nav.ejs`,
+    `
+    <link href="/css/Nav.css" rel="stylesheet" type="text/css">
+<div class="Nav">
+    <header class= "NavContent" style="color:${color};background-color:${bg_color}" >
+        <div class="logo " style="color:${color}"  name="F_logoname"><h3 style="color:${color}" > <a href="/" style="color:${color}">${heaterContact}</a></h3></div>
+        <div class='menu' style="color:${color}"   onclick="gettext()"><i class="fa-solid fa-bars" style="color:${color}" ></i></div> 
+     </header> 
+     <div id="demo" class='Black' onclick="gettext()" style="color:${color};background-color:${bg_color}">
+        <a href="/" style="color:${color}" >${links1}</a>
+        <a href="/product" style="color:${color}">${links2}</a>
+        <a href="/about" style="color:${color}">${links3}</a>
+        <a href="contact" style="color:${color}">${links4}</a>            
+        <a href="/dashboard" style="color:${color}"><i class="fa-solid fa-user"></i>addmin</a>  
+     </div>
+     <script>
+        function gettext() {            
+           var element = document.getElementById("demo");
+           element.classList.toggle("Open_nav");
+        }   
+      </script>
+</div>
+
    `,
     function (err) {
       if (err) throw err;

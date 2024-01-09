@@ -2,6 +2,34 @@
   visibility: hidden;
   display: block;
   position: absolute;
+  box-shadow: 1px 1px 8px gray;
+}
+/* Navbar Mobile */
+.Black {
+  color: black;
+  visibility: hidden;
+  transition: 0.2s;
+  position: absolute;
+  right: 0;
+  top: 3rem;
+}
+.Open_nav {
+  visibility: visible;
+  width: 80%;
+  top: 0.5rem;
+  position: absolute;
+  right: 0rem;
+  padding: 1rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border: 2px solid transparent;
+  box-shadow: 1px -1px 3px gray;
+}
+.Open_nav > * {
+  margin: 1rem 6rem 1rem 1rem;
+  left: 0;
 }
 @media only screen and (max-width: 600px) {
   .Nav {

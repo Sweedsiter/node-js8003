@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <%- include('./head'); %>
+  <%- include('./MainHead/head'); %>
 </head>
 <link href="/css/home.css" rel="stylesheet" type="text/css">
-<body class='contener' > 
-  <%- include('./Head/Nav'); %>
-    <header><%- include('./header'); %></header>        
-    <div class="content"><%- include('./Home/HomePage001'); %></div>
+<body class='contener'  > 
+  <%- include('./Head/Nav'); %>    
+    <header><%- include('./header'); %></header>     
+    <div class="content" ><%- include('./Home/HomePage001'); %></div>
     <div class="content">Longin Name  = <%= user %> <br/> Login Password = <%= pass %></div> 
+    <!-- 
+      <link href="/css/Nav.css" rel="stylesheet" type="text/css">
+<div class="Nav">
+    <header class= "NavContent" style="color:#fff5f5;background-color:#01317e" >
+        <div class="logo " style="color:#fff5f5" name="F_logoname"><h3> <a href="/" style="color:#fffafa" ><i class="fa-brands fa-html5"></i></a></h3></div>
+        <div class='menu'  onclick="gettext()"><i class="fa-solid fa-bars" ></i></div> 
+     </header> 
+     <div id="demo" class='Black' onclick="gettext()" style="background:#01317e">
+        <a href="/" style="color:#f6eeee" >หน้าแรก</a>
+        <a href="/product" style="color:#f6eeee">สิ่นค้า</a>
+        <a href="/about" style="color:#f6eeee">เกี่ยวกับ</a>
+        <a href="contact" style="color:#f6eeee">ติดต่อ</a>            
+        <a href="/dashboard" style="color:#f6eeee"><i class="fa-solid fa-user"></i>addmin</a>  
+     </div>
+     <script>
+        function gettext() {            
+           var element = document.getElementById("demo");
+           element.classList.toggle("Open_nav");
+        }   
+      </script>
+</div>
+
+     -->
+    
 </body>
 <script src="/client.js"></script>
 </html>
