@@ -10,6 +10,9 @@
 .header .logo {
   padding-left: 2rem;
 }
+.header .menu {
+  visibility: hidden;
+}
 .header .links {
   display: flex;
   flex-direction: row;
@@ -24,4 +27,11 @@
 }
 .header .links a:hover {
   font-weight: bolder;
+}
+
+/* media */
+@media only screen and (max-width: 600px) {
+  .header {
+    visibility: hidden;
+  }
 }

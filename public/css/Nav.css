@@ -1,0 +1,23 @@
+.Nav {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+}
+@media only screen and (max-width: 600px) {
+  .Nav {
+    visibility: visible;
+    position: relative;
+    margin-top: -0.6rem;
+    width: 100%;
+  }
+  .Nav .NavContent {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .Nav .NavContent .menu {
+    font-size: 1.6rem;
+  }
+}
