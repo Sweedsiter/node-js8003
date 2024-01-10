@@ -6,6 +6,7 @@ exports.home = async (req, res) => {
     user: process.env.USERNAME,
     pass: process.env.PASSWORD,
   });
+
   console.log("Hello " + req.url + " home");
 };
 // PageColor
