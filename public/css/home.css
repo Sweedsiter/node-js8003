@@ -5,6 +5,8 @@
 }
 body {
   width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(41, 39, 39);
 }
 .contener {
   display: flex;

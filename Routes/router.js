@@ -1,16 +1,30 @@
 const express = require("express");
 const router = express.Router();
 const { addhaeder } = require("../controllers/Header");
-const { home } = require("../controllers/controller");
-const fs = require("fs");
+const { home, PageColor } = require("../controllers/controller");
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/avatar/logo");
+  },
+  filename: function (req, file, callback) {
+    callback(null, Date.now() + ".jpg");
+  },
+});
+const uploadlogo = multer({
+  storage: storage,
+});
+console.log();
 
 router.get("/", home);
 
 router.get("/product", (req, res) => {
   res.render("Product");
-  fs.unlink("./public/avatar/logo/idea.png", function () {
-    console.log("File deleted!");
-  });
+  // const fs = require("fs");
+  // fs.unlink("./public/avatar/logo/idea.png", function () {
+  //   console.log("File deleted!");
+  // });
 });
 router.get("/about", (req, res) => {
   res.render("About");
@@ -21,7 +35,9 @@ router.get("/contact", (req, res) => {
 
 // post
 
-router.post("/addheader", addhaeder); // การแก้
+router.post("/addheader", uploadlogo.single("logoimg"), addhaeder); // การแก้
+router.post("/PageColor", PageColor); // การแก้
+
 router.post("/login", (req, res) => {
   const name = process.env.USERNAME;
   const pass = process.env.PASSWORD;

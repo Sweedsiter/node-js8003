@@ -7,15 +7,15 @@ exports.addhaeder = async (req, res) => {
   const links3 = req.body.links3;
   const links4 = req.body.links4;
   const color = req.body.color;
+  const logoimg = req.file.filename;
   const bg_color = req.body.bg_color;
-
   // สร้าง Header จอใหญ่
   await fs.writeFile(
     `./views/header.ejs`,
     `
     <link href="/css/Header.css" rel="stylesheet" type="text/css">
     <header class= "header" style="color:${color};background-color:${bg_color}" >
-        <div class="logo " style="color:${color}" name="F_logoname"><h3> <a href="/" style="color:#fffafa" >${heaterContact}</a></h3></div>
+        <div class="logo " style="color:${color}" name="F_logoname"><h3> <a href="/" style="color:#fffafa" >${heaterContact}<img src="/avatar/logo/${logoimg}" alt="Logo" height="35"></a></h3></div>
         <div class="links" >
            <a href="/" style="color:${color}" >${links1}</a>
            <a href="/product" style="color:${color}">${links2}</a>
@@ -39,7 +39,7 @@ exports.addhaeder = async (req, res) => {
     <link href="/css/Nav.css" rel="stylesheet" type="text/css">
 <div class="Nav">
     <header class= "NavContent" style="color:${color};background-color:${bg_color}" >
-        <div class="logo " style="color:${color}"  name="F_logoname"><h3 style="color:${color}" > <a href="/" style="color:${color}">${heaterContact}</a></h3></div>
+        <div class="logo " style="color:${color}"  name="F_logoname"><h3 style="color:${color}" > <a href="/" style="color:${color}">${heaterContact}<img src="/avatar/logo/${logoimg}" alt="Logo" height="35"></a></h3></div>
         <div class='menu' style="color:${color}"   onclick="gettext()"><i class="fa-solid fa-bars" style="color:${color}" ></i></div> 
      </header> 
      <div id="demo" class='Black' onclick="gettext()" style="color:${color};background-color:${bg_color}">
@@ -67,7 +67,7 @@ exports.addhaeder = async (req, res) => {
     if (rer) {
       console.log("เกิดผิตพลาด", rer);
     } else {
-      res.redirect("/dashboard");
+      res.render("Dashboard");
     }
   });
 };

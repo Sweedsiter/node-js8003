@@ -1,0 +1,18 @@
+<link href="/css/PageColor.css" rel="stylesheet" type="text/css">
+<form  method="post" action="/PageColor" class="Headeredit" >
+    <h4>Colors</h4>   
+    <p>แก้ไข สีของหน้าเว็บ และ สีข้อความ</p>   
+    <input name='font_color' type='color' value="black">font-color</input>
+    <input name='back_color' type='color' value="#FFFFFF">Bg-color</input>
+    <br/>
+    <br/>
+    <%- include('../header'); %>
+    <%- include('../Home/HomePage001'); %>
+    <br/>
+    <br/>
+  <div>
+    <button type='submit'>Save</button>
+    <!-- <a href="/" style="">กลับหน้าแรก</a>   -->
+  </div>
+</form>
+<script src="/client.js"></script>

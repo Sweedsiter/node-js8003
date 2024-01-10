@@ -10,6 +10,9 @@
 .header .logo {
   padding-left: 2rem;
 }
+.header .logo a > img {
+  padding-left: 1rem;
+}
 .header .menu {
   visibility: hidden;
 }

@@ -4,7 +4,7 @@
   <%- include('./MainHead/head'); %>
 </head>
 <link href="/css/Dashboard.css" rel="stylesheet" type="text/css">
-<body class='MainDB' > 
+<body class='MainDB'  > 
   <%- include('./Head/Nav'); %>
     <header><%- include('./header'); %></header>    
     <div class="Dashboard">
@@ -29,7 +29,12 @@
      </div>   
 
      <!-- Right Contents -->
-      <div class='R'><%- include('./Head/Headeredit'); %></div>
+      <div class='R' >
+        <%- include('./Head/Headeredit'); %>
+        <div style="color:<%= include('../public/avatar/page/fontColor.txt'); %>;background-color:<%= include('../public/avatar/page/backgroundColor.txt'); %>">     
+         <%- include('./Home/PageColor'); %>
+        </div>
+      </div>
     </div>
     <button class="btn"><a href="/logout">ออกจากระบบ</a></button>
 </body>

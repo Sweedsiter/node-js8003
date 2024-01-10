@@ -52,6 +52,10 @@
     justify-content: space-between;
     align-items: baseline;
   }
+  .Nav .NavContent .logo img {
+    margin-left: 2rem;
+    height: 30px;
+  }
   .Nav .NavContent .menu {
     font-size: 1.6rem;
   }
