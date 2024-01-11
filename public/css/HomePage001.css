@@ -49,11 +49,16 @@
 }
 .H001 .R > div {
   border: 1px solid black;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0.5rem 2rem;
   border-radius: 10px;
   align-items: center;
   text-align: center;
   box-shadow: 1px 1px 3px gray;
+  transition: 0.2s;
+}
+.H001 .R > div:hover {
+  padding: 1rem 2rem;
+  font-size: larger;
 }
 .H001 .R > div i {
   font-size: 2.5rem;
@@ -61,7 +66,7 @@
 @media only screen and (max-width: 600px) {
   .content {
     margin-top: -3rem;
-    height: auto;
+    height: fit-content;
     flex-direction: column;
     align-self: center;
     align-items: center;
