@@ -25,18 +25,25 @@
         </div>
         <div>
           <p> <i class="fa-regular fa-pen-to-square icon"></i><a href="#">แก้ไข Contact ></a></p>         
-        </div>         
+        </div>  
+        <button class="btn" style="margin: 2rem 3rem;"><a href="/logout" >ออกจากระบบ</a></button>       
      </div>   
 
      <!-- Right Contents -->
       <div class='R' >
         <%- include('./Head/Headeredit'); %>
+
         <div style="color:<%= include('../public/avatar/page/fontColor.txt'); %>;background-color:<%= include('../public/avatar/page/backgroundColor.txt'); %>">     
          <%- include('./Editor/PageColor'); %>
+    
         </div>
+        <div style="color:<%= include('../public/avatar/page/fontColor.txt'); %>;background-color:<%= include('../public/avatar/page/backgroundColor.txt'); %>">     
+          <%- include('./Editor/HomeEdit001'); %>
+         </div>
+
       </div>
     </div>
-    <button class="btn"><a href="/logout">ออกจากระบบ</a></button>
+   
 </body>
 <script src="/client.js"></script>
 </html>

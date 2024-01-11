@@ -1,6 +1,5 @@
 .MainDB {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
 }
 .MainDB > .Dashboard .L h1 {
@@ -8,13 +7,13 @@
 }
 .MainDB .Dashboard {
   display: flex;
-  flex-wrap: wrap;  
-  margin: 2rem 1rem;
+  margin: 2rem 3rem;
   justify-content: center;
   transition: 0.4s;
 }
 .MainDB .Dashboard .L {
   margin: 2rem 3rem 2rem 0rem;
+  width: 35%;
 }
 .MainDB .Dashboard > .L > div {
   padding: 1.5rem;
