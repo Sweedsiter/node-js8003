@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { addhaeder } = require("../controllers/Header");
+const { H001 } = require("../controllers/HomePage");
 const { home, PageColor } = require("../controllers/controller");
 const multer = require("multer");
 
@@ -18,6 +19,7 @@ const uploadlogo = multer({
 console.log();
 
 router.get("/", home);
+router.post("/HomeEdit001", H001);
 
 router.get("/product", (req, res) => {
   res.render("Product");
