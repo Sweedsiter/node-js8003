@@ -60,13 +60,14 @@
 }
 @media only screen and (max-width: 600px) {
   .content {
-    transform: translateY(-4rem);
-    margin-top: 0rem;
-    height: fit-content;
+    margin-top: -3rem;
+    height: auto;
     flex-direction: column;
-    position: relative;
+    align-self: center;
+    align-items: center;
   }
   .H001 .L {
     margin-right: 0rem;
+    padding: 5rem 2rem 1rem 2rem;
   }
 }
