@@ -15,6 +15,5 @@ body {
   width: 100%;
 }
 .contener > .content {
-  border: 1px solid gray;
-  padding: 1rem;
+  padding: 2rem;
 }

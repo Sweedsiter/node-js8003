@@ -2,8 +2,8 @@
 <form  method="post" action="/PageColor" class="Headeredit" >
     <h4>Colors</h4>   
     <p>แก้ไข สีของหน้าเว็บ และ สีข้อความ</p>   
-    <input name='font_color' type='color' value="black">font-color</input>
-    <input name='back_color' type='color' value="#FFFFFF">Bg-color</input>
+    <input name='font_color' type='color' value="<%- include('../../public/avatar/page/fontColor.txt');%>">font-color</input>
+    <input name='back_color' type='color' value="<%- include('../../public/avatar/page/backgroundColor.txt');%>">Bg-color</input>
     <br/>
     <br/>
     <%- include('../header'); %>

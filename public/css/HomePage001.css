@@ -1,0 +1,72 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 500px;
+}
+.H001 {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/984/880/non_2x/abstract-colorful-geometric-overlapping-background-and-texture-free-vector.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.H001 .L {
+  margin-right: 1rem;
+}
+.H001 .L h1 {
+  margin-bottom: 1rem;
+}
+.H001 .L .lineBox {
+  position: relative;
+  width: 100%;
+}
+.H001 .L .lineBox .small {
+  height: 0.5rem;
+}
+.H001 .L .lineBox .largar {
+  position: absolute;
+  height: 1rem;
+  right: 0;
+  transform: translateY(-0.75rem);
+  width: 30%;
+}
+.H001 .L > P {
+  margin-top: 1rem;
+}
+.H001 .R {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px 50px;
+  align-items: center;
+  padding: 5rem;
+}
+.H001 .R > div {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 1px 1px 3px gray;
+}
+.H001 .R > div i {
+  font-size: 2.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    transform: translateY(-4rem);
+    margin-top: 0rem;
+    height: fit-content;
+    flex-direction: column;
+    position: relative;
+  }
+  .H001 .L {
+    margin-right: 0rem;
+  }
+}

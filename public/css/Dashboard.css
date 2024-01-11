@@ -8,7 +8,7 @@
 }
 .MainDB .Dashboard {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   margin: 2rem 1rem;
   justify-content: center;
   transition: 0.4s;
