@@ -48,7 +48,16 @@
   }
   .MainDB .Dashboard .L {
     width: 100%;
-    margin: 2rem 1rem 3rem 0rem;
+    margin: 0rem 1rem 3rem 0rem;
     left: 0;
+    padding: 2rem;
+  }
+  .MainDB .Dashboard {
+    margin: 0;
+  }
+
+  .MainDB .Dashboard .R {
+    margin: 0;
+    padding: 0;
   }
 }
