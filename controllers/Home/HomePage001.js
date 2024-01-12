@@ -1,6 +1,9 @@
 const fs = require("fs");
 
 exports.H001 = async (req, res) => {
+  // File Image
+  // const H001BG = req.file.filename;
+  // Creat files
   await fs.writeFile(
     "./public/avatar/Home/HomePage001-company.txt",
     req.body.company,
@@ -46,8 +49,8 @@ exports.H001 = async (req, res) => {
   width: 100%;
   height: 500px;
 }
-.H001 {
-  background-image: url("https://static.vecteezy.com/system/resources/previews/001/984/880/non_2x/abstract-colorful-geometric-overlapping-background-and-texture-free-vector.jpg");
+.H001 {  
+  background-image: url( "/avatar/Home/${req.file.filename}"); 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
