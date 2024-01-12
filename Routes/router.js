@@ -63,11 +63,12 @@ router.get("/login", (req, res) => {
   res.render("Login");
 });
 router.get("/dashboard", (req, res) => {
-  if (req.session.login) {
-    res.render("Dashboard");
-  } else {
-    res.render("Login");
-  }
+  res.render("Dashboard");
+  // if (req.session.login) {
+  //   res.render("Dashboard");
+  // } else {
+  //   res.render("Login");
+  // }
 });
 router.get("/logout", (req, res) => {
   req.session.destroy((err) => {

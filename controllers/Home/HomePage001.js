@@ -2,6 +2,38 @@ const fs = require("fs");
 
 exports.H001 = async (req, res) => {
   await fs.writeFile(
+    "./public/avatar/Home/HomePage001-company.txt",
+    req.body.company,
+    function (err) {},
+  );
+  await fs.writeFile(
+    "./public/avatar/Home/HomePage001-company_content.txt",
+    req.body.company_content,
+    function (err) {},
+  );
+  await fs.writeFile(
+    "./public/avatar/Home/HomePage001-Click1.txt",
+    req.body.Click1,
+    function (err) {},
+  );
+  await fs.writeFile(
+    "./public/avatar/Home/HomePage001-Click2.txt",
+    req.body.Click2,
+    function (err) {},
+  );
+  await fs.writeFile(
+    "./public/avatar/Home/HomePage001-Click3.txt",
+    req.body.Click3,
+    function (err) {},
+  );
+  await fs.writeFile(
+    "./public/avatar/Home/HomePage001-Click4.txt",
+    req.body.Click4,
+    function (err) {},
+  );
+
+  //
+  await fs.writeFile(
     `./views/Home/HomePage001.ejs`,
     `
     <style>
@@ -90,33 +122,30 @@ exports.H001 = async (req, res) => {
 <!-- View Html -->
 <div class="content H001" >
     <div class="L">
-        <h1>welcome to -------</h1> 
+        <h1><%- include('../../public/avatar/Home/HomePage001-company.txt');%></h1> 
         <div class="lineBox" >
             <div class="small" style=" background-color:<%- include('../../public/avatar/page/fontColor.txt')%>"></div>
             <div class="largar" style=" background-color:<%- include('../../public/avatar/page/fontColor.txt')%>"></div>
         </div>
-        <p>อย่าโกหกฉัน อย่าทำอย่างนั้น หลอกลวงกัน เธอนั้นจะได้อะไร   มื่อเธอมีเขา อยู่เต็มหัวใจ เก็บมานานอยู่ในหัวใจ ฉันรู้ถึงเธอจะปิด  ที่ยอมให้เธอหลอกกันเรื่อยม
-            สิ่งที่เธอทำมันรุนแรง แกล้งรักให้ใจฉันเจ็บ
-            เก็บมานานอยู่ในหัวใจ ฉันรู้ถึงเธอจะปิด  ที่ยอมให้เธอหลอกกันเรื่อยมา           
-             ที่จะยอมให้เธอจากไป เป็นของเขาจริงๆ.
-             <!-- <%- include('../../public/avatar/page/backgroundColor.txt'); %>  -->
+        <p><%- include('../../public/avatar/Home/HomePage001-company_content.txt');%> </p>
+        
     </div>
     <div class="R">
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-brands fa-algolia"></i>
-            <p>Home</p>
+            <p><%- include('../../public/avatar/Home/HomePage001-Click1.txt');%></p>
         </div>
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-solid fa-bars-progress"></i>
-            <p>Products</p>
+            <p><%- include('../../public/avatar/Home/HomePage001-Click2.txt');%></p>
         </div>
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-regular fa-address-card"></i>
-            <p>About</p>
+            <p><%- include('../../public/avatar/Home/HomePage001-Click3.txt');%></p>
         </div>
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-regular fa-address-book"></i>
-            <p>Contact</p>
+            <p><%- include('../../public/avatar/Home/HomePage001-Click4.txt');%></p>
         </div>      
     </div>
 </div>   
@@ -126,7 +155,6 @@ exports.H001 = async (req, res) => {
       console.log(`Add HomPage001 เรียบร้อย`);
     },
   );
-  await res.render("Dashboard");
+  await res.redirect("/dashboard");
   console.log("H001 Edit Ok");
-  console.log(req.body);
 };

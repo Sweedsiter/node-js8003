@@ -1,13 +1,12 @@
 <link href="/css/Forms.css" rel="stylesheet" type="text/css">
 <form  method="post" action="/HomeEdit001" class="Headeredit HomeEdit001"  >
     <h4>แก้ไข หน้าแรก H001 </h4>  <br/>    
-
-      <input name='company' type='text' value="Company" ></input>
-      <input name='company-content' type='text' value="Company-Content" ></input>
-      <input name='Click1' type='text' value="Click1" ></input>
-      <input name='Click2' type='text' value="Click2" ></input>
-      <input name='Click3' type='text' value="Click3" ></input>
-      <input name='Click4' type='text' value="Click4" ></input><br/>
+      <input name='company' type='text' value="<%- include('../../public/avatar/Home/HomePage001-company.txt');%>" ></input>
+      <input name='company_content' type='text' value="<%- include('../../public/avatar/Home/HomePage001-company_content.txt');%>" ></input>
+      <input name='Click1' type='text' value="<%- include('../../public/avatar/Home/HomePage001-Click1.txt');%>" ></input>
+      <input name='Click2' type='text' value="<%- include('../../public/avatar/Home/HomePage001-Click2.txt');%>" ></input>
+      <input name='Click3' type='text' value="<%- include('../../public/avatar/Home/HomePage001-Click3.txt');%>" ></input>
+      <input name='Click4' type='text'value="<%- include('../../public/avatar/Home/HomePage001-Click4.txt');%>" ></input><br/>
       <button type='submit' >Save</button>
     <!-- <a href="/" style="">กลับหน้าแรก</a>   -->
   </div>
