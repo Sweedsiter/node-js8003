@@ -1,4 +1,7 @@
 <link href="/css/Forms.css" rel="stylesheet" type="text/css">
+
+
+<!-- Hoo1 -->
 <form  method="post" action="/HomeEdit001" class="Headeredit HomeEdit001" enctype="multipart/form-data" >
     <h4>แก้ไข หน้าแรก H001 </h4>  <br/>    
       <input name='company' type='text' value="<%- include('../../public/avatar/Home/HomePage001-company.txt');%>" ></input>
@@ -13,5 +16,23 @@
       <button type='submit' >Save</button>
     <!-- <a href="/" style="">กลับหน้าแรก</a>   -->
   </div>
+</form>
+
+
+<!-- Hoo2 -->
+<form  method="post" action="/HomeEdit002" class="Headeredit HomeEdit001" enctype="multipart/form-data" >
+  <h4>แก้ไข หน้าแรก H002 </h4>  <br/>    
+    <input name='company' type='text' value="<%- include('../../public/avatar/Home/HomePage001-company.txt');%>" ></input>
+    <input name='company_content' type='text' value="<%- include('../../public/avatar/Home/HomePage001-company_content.txt');%>" ></input>
+    <input name='Click1' type='text' value="<%- include('../../public/avatar/Home/HomePage001-Click1.txt');%>" ></input>
+    <input name='Click2' type='text' value="<%- include('../../public/avatar/Home/HomePage001-Click2.txt');%>" ></input>
+    <input name='Click3' type='text' value="<%- include('../../public/avatar/Home/HomePage001-Click3.txt');%>" ></input>
+    <input name='Click4' type='text'value="<%- include('../../public/avatar/Home/HomePage001-Click4.txt');%>" ></input>
+
+    <input name='H001BG' type='file' required >รูปหน้าปกหลัง</input>
+   <br/>
+    <button type='submit' >Save</button>
+  <!-- <a href="/" style="">กลับหน้าแรก</a>   -->
+</div>
 </form>
 <script src="/client.js"></script>

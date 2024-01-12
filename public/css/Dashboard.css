@@ -9,6 +9,7 @@
   width: 100%;
   padding: 3rem;
   display: flex;
+  flex-direction: row;
 }
 
 .MainDB > .Dashboard .L h1 {
@@ -28,6 +29,7 @@
   color: black;
   margin-left: 0.4rem;
 }
+
 /* media */
 @media only screen and (max-width: 600px) {
   .MainDB .Dashboard {
