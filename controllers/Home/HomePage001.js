@@ -128,4 +128,5 @@ exports.H001 = async (req, res) => {
   );
   await res.render("Dashboard");
   console.log("H001 Edit Ok");
+  console.log(req.body);
 };

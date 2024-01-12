@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { addhaeder } = require("../controllers/Header");
-const { H001 } = require("../controllers/HomePage");
+const { H001 } = require("../controllers/Home/HomePage001");
 const { home, PageColor } = require("../controllers/controller");
 const multer = require("multer");
 
@@ -50,15 +50,18 @@ router.post("/login", (req, res) => {
     req.session.username = username;
     req.session.password = password;
     req.session.login = true;
-    req.session.cookie.maxAge = timeExpire;
+    // req.session.cookie.maxAge = timeExpire;
     res.render("Dashboard");
   } else {
-    res.redirect("/");
+    res.render("Login");
   }
   console.log("Addmin Login");
 });
 
 // Dashboard Addmin
+router.get("/login", (req, res) => {
+  res.render("Login");
+});
 router.get("/dashboard", (req, res) => {
   if (req.session.login) {
     res.render("Dashboard");
