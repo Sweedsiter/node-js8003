@@ -82,6 +82,7 @@ exports.H001 = async (req, res) => {
 .H001 .L > P {
   margin-top: 1rem;
   float: left;
+  line-height: 2.5;
 }
 .H001 .R {
   width: fit-content;
