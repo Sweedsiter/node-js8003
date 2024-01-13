@@ -1,0 +1,67 @@
+.H002 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+.H002 .On {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  flex-wrap: wrap;
+}
+.H002 .On > * {
+  padding: 1rem;
+  width: 250px;
+  position: relative;
+  height: auto;
+  align-content: center;
+  text-align: center;
+  overflow: visible;
+  transition: 0.2s;
+  margin: 1rem;
+}
+
+.H002 .On .promotion {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  margin: 1rem;
+}
+.H002 .On > div img {
+  padding: 0.4rem;
+  width: 220px;
+  height: inherit;
+  float: none;
+}
+.H002 .On .star {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  color: rgba(207, 182, 16, 0.75);
+  font-size: small;
+  margin: -0.5rem 0 0.6rem 2.3rem;
+}
+.star .icon {
+  padding-right: 0.4rem;
+}
+.H002 .On > div a {
+  box-shadow: 0px 0px 2px gray;
+  padding: 4px 10px;
+  margin: 16px;
+}
+
+.H002 .On > div:hover {
+  box-shadow: 0px 0px 8px gray;
+  border-radius: 10px;
+}
+/* media */
+@media only screen and (max-width: 600px) {
+  .H002 {
+    margin-top: 5rem;
+  }
+}

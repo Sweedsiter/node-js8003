@@ -8,10 +8,13 @@ body {
   background-color: rgb(255, 255, 255);
   color: rgb(41, 39, 39);
 }
-
 .contener {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  position: absolute;
+}
+.M_Head {
+  position: fixed;
   width: 100%;
 }

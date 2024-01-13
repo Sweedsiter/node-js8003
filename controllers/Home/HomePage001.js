@@ -104,6 +104,9 @@ exports.H001 = async (req, res) => {
   padding: 1rem 2rem;
   font-size: larger;
 }
+.H001 .R > div p a{
+
+}
 .H001 .R > div i {
   font-size: 2.5rem;
 }
@@ -136,19 +139,19 @@ exports.H001 = async (req, res) => {
     <div class="R">
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-brands fa-algolia"></i>
-            <p><%- include('../../public/avatar/Home/HomePage001-Click1.txt');%></p>
+            <p><a href="/" style="color:  <%- include('../../public/avatar/page/fontColor.txt'); %>"><%- include('../../public/avatar/Home/HomePage001-Click1.txt');%></a></p>
         </div>
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-solid fa-bars-progress"></i>
-            <p><%- include('../../public/avatar/Home/HomePage001-Click2.txt');%></p>
+            <p><a href="/product" style="color:  <%- include('../../public/avatar/page/fontColor.txt'); %>"><%- include('../../public/avatar/Home/HomePage001-Click2.txt');%></a></p>
         </div>
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-regular fa-address-card"></i>
-            <p><%- include('../../public/avatar/Home/HomePage001-Click3.txt');%></p>
+            <p><a href="/about" style="color:  <%- include('../../public/avatar/page/fontColor.txt'); %>"><%- include('../../public/avatar/Home/HomePage001-Click3.txt');%></a></p>
         </div>
         <div style="background-color:  <%- include('../../public/avatar/page/backgroundColor.txt'); %> ">
             <i class="fa-regular fa-address-book"></i>
-            <p><%- include('../../public/avatar/Home/HomePage001-Click4.txt');%></p>
+            <p><a href="/contact" style="color:  <%- include('../../public/avatar/page/fontColor.txt'); %>"><%- include('../../public/avatar/Home/HomePage001-Click4.txt');%></a></p>
         </div>      
     </div>
 </div>   
