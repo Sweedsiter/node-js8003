@@ -97,7 +97,7 @@ exports.H001 = async (req, res) => {
   border-radius: 10px;
   align-items: center;
   text-align: center;
-  box-shadow: 1px 1px 3px gray;
+  box-shadow: 1px 1px 16px gray;
   transition: 0.2s;
 }
 .H001 .R > div:hover {
@@ -119,6 +119,7 @@ exports.H001 = async (req, res) => {
     align-items: center;
   }
 .H001 .L {
+  margin-top:3rem;
     margin-right: 0rem;
     padding: 5rem 2rem 1rem 2rem;
     width:100%;

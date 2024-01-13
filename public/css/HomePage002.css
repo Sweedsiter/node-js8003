@@ -72,7 +72,7 @@
 }
 .H002 .H002_02 .first {
   padding: 1rem;
-  box-shadow: 0 0 3px gray;
+  box-shadow: 0 0 20px gray;
   margin: 0 3rem 0rem 0rem;
   transition: 0.02s;
 }
@@ -102,7 +102,7 @@
 }
 .H002 .H002_03 > * {
   width: 250px;
-  box-shadow: 0 0 3px gray;
+  box-shadow: 0 0 16px gray;
   margin: 1rem;
   display: flex;
   align-items: center;
