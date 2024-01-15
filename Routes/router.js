@@ -32,6 +32,10 @@ const uploadH001BG = multer({
 
 router.get("/", home);
 router.post("/HomeEdit001", uploadH001BG.single("H001BG"), H001);
+router.post("/HomeEdit002", (req, res) => {
+  res.render("Dashboard");
+  console.log(req.body);
+});
 
 router.get("/product", (req, res) => {
   res.render("Product");
