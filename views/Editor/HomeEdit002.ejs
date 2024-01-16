@@ -1,9 +1,13 @@
 <!-- Hoo2 -->
 <link href="/css/Forms.css" rel="stylesheet" type="text/css">
 <link href="/css/HomeEdit002.css" rel="stylesheet" type="text/css">
-    <form  method="post" action="/HomeEdit002" class="Headeredit HomeEdit001" enctype="multipart/form-data" >
+    <div class="Headeredit HomeEdit001"  >
         <h4>แก้ไข หน้าแรก H002 </h4>  <br/>    
-        <input name="promo01" type='text' value="<%- include('../../public/avatar/Home/H002-promo01.txt');%>"  ><input type="file" name="H002_promo01Img"></input></input>
+        <form  method="post" action="/dashboard/HomeEdit002" class="Headeredit HomeEdit001" enctype="multipart/form-data" >
+           <input name="promo01" type='text' value="<%- include('../../public/avatar/Home/H002-promo01.txt');%>"  ><input type="file" name="H002_promo01Img"></input></input>
+           <button type="submit" >Save</button>
+        </form>
+
         <input name="promo02" type='text'  value="<%- include('../../public/avatar/Home/H002-promo02.txt');%>" ><input type="file" name="H002_promo02Img"></input></input>
         <input name="promo03" type='text'   value="<%- include('../../public/avatar/Home/H002-promo03.txt');%>" ><input type="file"></input></input>
         <input name="promo04" type='text'  value="<%- include('../../public/avatar/Home/H002-promo04.txt');%>" ><input type="file"></input></input><br/><br/>
@@ -11,5 +15,5 @@
         <textarea  name="promoDetail" rows="4" cols="50"  ><%- include('../../public/avatar/Home/H002-promoDetail.txt');%> </textarea>
         <textatea name="promoDetail" type="text"></input>
         <br/>        
-        <button type="submit" >Save</button>
-    </form>
+       
+        </div>

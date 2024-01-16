@@ -3,7 +3,7 @@ const router = express.Router();
 const { addhaeder } = require("../controllers/Header");
 const { login, logut } = require("../controllers/Login-out/Login_out"); // Log in and Log out
 const { H001 } = require("../controllers/Home/HomePage001");
-const { H002 } = require("../controllers/Home/HomePage002");
+const { H002_01 } = require("../controllers/Home/HomePage002");
 const { home, PageColor } = require("../controllers/controller");
 const multer = require("multer");
 // Logo Upload
@@ -47,7 +47,11 @@ const uploadH002Promo01 = multer({
 
 router.get("/", home);
 router.post("/HomeEdit001", uploadH001BG.single("H001BG"), H001);
-router.post("/HomeEdit002", uploadH002Promo01.single("H002_promo01Img"),uploadH002Promo01.single("H002_promo02Img"), H002);
+router.post(
+  "/dashboard/HomeEdit002",
+  uploadH002Promo01.single("H002_promo01Img"),
+  H002_01,
+);
 
 router.get("/product", (req, res) => {
   res.render("Product");
