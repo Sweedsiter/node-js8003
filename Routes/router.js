@@ -3,6 +3,7 @@ const router = express.Router();
 const { addhaeder } = require("../controllers/Header");
 const { login, logut } = require("../controllers/Login-out/Login_out"); // Log in and Log out
 const { H001 } = require("../controllers/Home/HomePage001");
+const { H002 } = require("../controllers/Home/HomePage002");
 const { home, PageColor } = require("../controllers/controller");
 const multer = require("multer");
 // Logo Upload
@@ -17,6 +18,7 @@ const storage = multer.diskStorage({
 const uploadlogo = multer({
   storage: storage,
 });
+
 // H001 backgrougd Upload
 const storageH001 = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -30,12 +32,22 @@ const uploadH001BG = multer({
   storage: storageH001,
 });
 
+// Home002 Imges
+const storageH002promo01 = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/avatar/Home");
+  },
+  filename: function (req, file, callback) {
+    callback(null, Date.now() + ".jpg");
+  },
+});
+const uploadH002Promo01 = multer({
+  storage: storageH002promo01,
+});
+
 router.get("/", home);
 router.post("/HomeEdit001", uploadH001BG.single("H001BG"), H001);
-router.post("/HomeEdit002", (req, res) => {
-  res.render("Dashboard");
-  console.log(req.body);
-});
+router.post("/HomeEdit002", uploadH002Promo01.single("H002_promo01Img"),uploadH002Promo01.single("H002_promo02Img"), H002);
 
 router.get("/product", (req, res) => {
   res.render("Product");
