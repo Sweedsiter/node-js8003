@@ -164,5 +164,5 @@ exports.H001 = async (req, res) => {
     },
   );
   await res.redirect("/dashboard");
-  console.log("H001 Edit Ok");
+  console.log("H001 Edit Ok", req.body);
 };
