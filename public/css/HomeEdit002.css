@@ -1,47 +1,13 @@
-.HomeEdit002 {
-  display: flex;
-  flex-direction: column;
-}
-.HomeEdit002 .H002-1 {
-  padding: 1rem;
-  width: 80%;
-  float: left;
+.H002 .promotions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  align-items: flex-start;
-  border-bottom: 1px solid gray;
 }
-.HomeEdit002 .promotinoDetail {
-  padding: 1rem;
-  width: 80%;
-  float: left;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: flex-start;
-  border-bottom: 1px solid gray;
-}
-.HomeEdit002 .promotionContact {
-  width: 80%;
-  padding: 0rem;
-  border-bottom: 1px solid gray;
-  width: fit-content;
-  margin: 0.4rem;
-  align-self: center;
+.H002 .promotions > * {
+  width: 300px;
 }
 /* media */
 @media only screen and (max-width: 600px) {
-  .HomeEdit002 {
+  .H002 .promotions > * {
     width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  .HomeEdit002 > .H002-1 {
-    padding: 0;
-    margin: 0;
-  }
-  .HomeEdit002 > .H002-1 > * {
-    margin: 0;
   }
 }
