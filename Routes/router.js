@@ -5,7 +5,7 @@ const { login, logut } = require("../controllers/Login-out/Login_out"); // Log i
 const { H001 } = require("../controllers/Home/HomePage001");
 const { home, PageColor } = require("../controllers/controller");
 const multer = require("multer");
-const { H002Promo01 } = require("../controllers/Home/HomePage002");
+const { H002Promo01, H002Promo02 } = require("../controllers/Home/HomePage002");
 
 // Logo Upload
 const storage = multer.diskStorage({
@@ -25,7 +25,7 @@ const storageH001 = multer.diskStorage({
     cb(null, "./public/avatar/Home");
   },
   filename: function (req, file, callback) {
-    callback(null,"H001BG"+".jpg");
+    callback(null, "H001BG" + ".jpg");
   },
 });
 const uploadH001BG = multer({
@@ -33,7 +33,7 @@ const uploadH001BG = multer({
 });
 
 // H002 Upload img promo01
-const storageH002 = multer.diskStorage({
+const storageH002promo01 = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./public/avatar/Home/H002/promo01");
   },
@@ -42,7 +42,20 @@ const storageH002 = multer.diskStorage({
   },
 });
 const uploadH002 = multer({
-  storage: storageH002,
+  storage: storageH002promo01,
+});
+
+// H002 Upload img promo02
+const storageH002promo02 = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/avatar/Home/H002/promo02");
+  },
+  filename: function (req, file, callback) {
+    callback(null, "H002promo02" + ".jpg");
+  },
+});
+const uploadH002promo02 = multer({
+  storage: storageH002promo02,
 });
 
 // Home page all details
@@ -54,6 +67,11 @@ router.post(
   uploadH002.single("promo01Img"),
   H002Promo01,
 ); // การแก้ H002-promo01
+router.post(
+  "/HomeEdit002/promo02",
+  uploadH002promo02.single("promo02Img"),
+  H002Promo02,
+); // การแก้ H002-promo02
 
 // Products All show
 router.get("/product", (req, res) => {
