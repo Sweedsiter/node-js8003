@@ -5,7 +5,12 @@ const { login, logut } = require("../controllers/Login-out/Login_out"); // Log i
 const { H001 } = require("../controllers/Home/HomePage001");
 const { home, PageColor } = require("../controllers/controller");
 const multer = require("multer");
-const { H002Promo01, H002Promo02 } = require("../controllers/Home/HomePage002");
+const {
+  H002Promo01,
+  H002Promo02,
+  H002Promo03,
+  H002Promo04,
+} = require("../controllers/Home/HomePage002");
 
 // Logo Upload
 const storage = multer.diskStorage({
@@ -58,6 +63,32 @@ const uploadH002promo02 = multer({
   storage: storageH002promo02,
 });
 
+// H002 Upload img promo03
+const storageH002promo03 = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/avatar/Home/H002/promo03");
+  },
+  filename: function (req, file, callback) {
+    callback(null, "H002promo03" + ".jpg");
+  },
+});
+const uploadH002promo03 = multer({
+  storage: storageH002promo03,
+});
+
+// H002 Upload img promo04
+const storageH002promo04 = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/avatar/Home/H002/promo04");
+  },
+  filename: function (req, file, callback) {
+    callback(null, "H002promo04" + ".jpg");
+  },
+});
+const uploadH002promo04 = multer({
+  storage: storageH002promo04,
+});
+
 // Home page all details
 router.get("/", home);
 router.post("/addheader", uploadlogo.single("logoimg"), addhaeder); // การแก้ Header
@@ -72,6 +103,16 @@ router.post(
   uploadH002promo02.single("promo02Img"),
   H002Promo02,
 ); // การแก้ H002-promo02
+router.post(
+  "/HomeEdit002/promo03",
+  uploadH002promo03.single("promo03Img"),
+  H002Promo03,
+); // การแก้ <H002-promo03></H002-promo03>
+router.post(
+  "/HomeEdit002/promo04",
+  uploadH002promo04.single("promo04Img"),
+  H002Promo04,
+); // การแก้ H002-promo04
 
 // Products All show
 router.get("/product", (req, res) => {
