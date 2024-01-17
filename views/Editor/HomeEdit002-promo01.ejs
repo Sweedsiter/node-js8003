@@ -1,8 +1,11 @@
 <!-- Hoo2 -->
 <link href="/css/Forms.css" rel="stylesheet" type="text/css">
 <form  method="post" action="/HomeEdit002/promo01" class="Headeredit HomeEdit001" enctype="multipart/form-data"  style="margin:1rem;">
-    <h4>แก้ไข Promotion #1 </h4>  <br/>    
+    <h4>แก้ไข Promotion #1 </h4>  <br/>   
+      <img  src="/avatar/Home/H002/promo01/<%- include('../../public/avatar/Home/H002/promo01/promo01Img.txt'); %>" alt="Girl in a jacket" style="width:100px;" > 
+      <%- include('../../public/avatar/Home/H002/promo01/promo01.txt'); %>
       <input name='promo01Head' type='text' value="<%- include('../../public/avatar/Home/H002/promo01/promo01.txt');%>" ></input>
       <input name='promo01Img' type='file' value="" required></input>
+      
       <button type='submit' >Save</button>
 </form>
