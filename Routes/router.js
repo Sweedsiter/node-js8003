@@ -10,6 +10,7 @@ const {
   H002Promo02,
   H002Promo03,
   H002Promo04,
+  H002PromoDetails,
 } = require("../controllers/Home/HomePage002");
 
 // Logo Upload
@@ -88,8 +89,20 @@ const storageH002promo04 = multer.diskStorage({
 const uploadH002promo04 = multer({
   storage: storageH002promo04,
 });
+// H002 Upload img promo04
+const storageH002promoDetails = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/avatar/Home/H002/promoDetail");
+  },
+  filename: function (req, file, callback) {
+    callback(null, "H002promoDetails" + ".jpg");
+  },
+});
+const uploadH002promoDetails = multer({
+  storage: storageH002promoDetails,
+});
 
-// Home page all details
+// Home page all details------------------------------------------------------------------------
 router.get("/", home);
 router.post("/addheader", uploadlogo.single("logoimg"), addhaeder); // การแก้ Header
 router.post("/HomeEdit001", uploadH001BG.single("H001BG"), H001);
@@ -113,18 +126,23 @@ router.post(
   uploadH002promo04.single("promo04Img"),
   H002Promo04,
 ); // การแก้ H002-promo04
+router.post(
+  "/HomeEdit002/promoDetails",
+  uploadH002promoDetails.single("promoDetailsImg"),
+  H002PromoDetails,
+); // การแก้ H002-promoDetail
 
-// Products All show
+// Products All show------------------------
 router.get("/product", (req, res) => {
   res.render("Product");
 });
 
-// About All show
+// About All show-------------------------
 router.get("/about", (req, res) => {
   res.render("About");
 });
 
-// Contact All show
+// Contact All show--------------------------
 router.get("/contact", (req, res) => {
   res.render("Contact");
 });

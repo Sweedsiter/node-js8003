@@ -61,3 +61,24 @@ exports.H002Promo04 = async (req, res) => {
   await res.redirect("/dashboard");
   console.log("HomeEdit 04 ");
 };
+
+// Homepage 02 promotion Details---------------------------
+exports.H002PromoDetails = async (req, res) => {
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoDetail/promoDetailsHead.txt",
+    req.body.promoDetailsHead,
+    function () {},
+  );
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoDetail/promoDetailsTextarea.txt",
+    req.body.promoDetailsTextarea,
+    function () {},
+  );
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoDetail/promoDetailsImg.txt",
+    req.file.filename,
+    function () {},
+  );
+  await res.redirect("/dashboard");
+  console.log("HomeEdit PromoDetails OK ");
+};

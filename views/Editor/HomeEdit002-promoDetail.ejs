@@ -1,0 +1,20 @@
+<!-- Hoo2 -->
+<link href="/css/Forms.css" rel="stylesheet" type="text/css">
+<form  method="post" action="/HomeEdit002/promoDetails" class="Headeredit HomeEdit001  Forms" enctype="multipart/form-data"  style="margin:1rem;box-shadow:none;">
+  <div style="display: flex;flex-direction: column;margin: 1rem;">
+    <div class="first">
+      <img  class="H002-2" src="/avatar/Home/H002/promoDetail/<%- include('../../public/avatar/Home/H002/promoDetail/promoDetailsImg.txt'); %>" alt="Girl in a jacket"  style="width:180px;">
+    </div>
+    
+    <div style="margin:1rem;" >
+      <h3><%- include('../../public/avatar/Home/H002/promoDetail/promoDetailsHead.txt');%><i class="fa-solid fa-heart"  style="color:#1E90FF;padding-left:1rem;" ></i></h3>
+      <p><%- include('../../public/avatar/Home/H002/promoDetail/promoDetailsTextarea.txt');%> </p>
+   </div>           
+</div>
+
+     <h4>แก้ไข PromotionDetails</h4>  <br/>
+      <input name='promoDetailsHead' type='text' value="<%- include('../../public/avatar/Home/H002/promoDetail/promoDetailsHead.txt');%>" ></input><br/>
+      <textarea  name='promoDetailsTextarea' rows="2" cols="50" style="margin:0rem;width:100%;"><%- include('../../public/avatar/Home/H002/promoDetail/promoDetailsTextarea.txt');%></textarea >  <br/> 
+      <input name='promoDetailsImg' type='file' value="" required></input>
+      <button type='submit' >Save</button>
+</form>
