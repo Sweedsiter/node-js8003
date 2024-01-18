@@ -159,18 +159,6 @@ const uploadH002promoContactHead04 = multer({
   storage: storageH002promoContactHead04,
 });
 
-// // H002promoContactContents
-// const storageH002promoContactContents = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, "./public/avatar/Home/H002/promoContactContents");
-//   },
-//   filename: function (req, file, callback) {
-//     callback(null, "H002promoContactContents" + ".jpg");
-//   },
-// });
-// const uploadH002promoContactContents = multer({
-//   storage: storageH002promoContactContents,
-// });
 // Home page all details------------------------------------------------------------------------
 router.get("/", home);
 router.post("/addheader", uploadlogo.single("logoimg"), addhaeder); // การแก้ Header
@@ -250,12 +238,11 @@ router.get("/login", (req, res) => {
   res.render("Login");
 });
 router.get("/dashboard", (req, res) => {
-  res.render("Dashboard");
-  // if (req.session.login) {
-  //   res.render("Dashboard");
-  // } else {
-  //   res.render("Login");
-  // }
+  if (req.session.login) {
+    res.render("Dashboard");
+  } else {
+    res.render("Login");
+  }
 });
 router.get("/logout", logut);
 
