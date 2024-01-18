@@ -15,6 +15,7 @@ const {
   H002PromoContactHead02,
   H002PromoContactHead03,
   H002PromoContactHead04,
+  H002PromoContacContents,
 } = require("../controllers/Home/HomePage002");
 
 // Logo Upload
@@ -158,6 +159,18 @@ const uploadH002promoContactHead04 = multer({
   storage: storageH002promoContactHead04,
 });
 
+// // H002promoContactContents
+// const storageH002promoContactContents = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "./public/avatar/Home/H002/promoContactContents");
+//   },
+//   filename: function (req, file, callback) {
+//     callback(null, "H002promoContactContents" + ".jpg");
+//   },
+// });
+// const uploadH002promoContactContents = multer({
+//   storage: storageH002promoContactContents,
+// });
 // Home page all details------------------------------------------------------------------------
 router.get("/", home);
 router.post("/addheader", uploadlogo.single("logoimg"), addhaeder); // การแก้ Header
@@ -208,7 +221,8 @@ router.post(
   "/HomeEdit002/promoContactHead04",
   uploadH002promoContactHead04.single("promoContactHead04Img"),
   H002PromoContactHead04,
-); //uploadH002promoContactHead03
+); //uploadH002promoContactHead04
+router.post("/HomeEdit002/promoContactContents", H002PromoContacContents); //uploadH002promoContactHead04
 
 // Products All show------------------------
 router.get("/product", (req, res) => {

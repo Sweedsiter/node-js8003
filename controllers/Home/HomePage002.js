@@ -165,3 +165,20 @@ exports.H002PromoContactHead04 = async (req, res) => {
   await res.redirect("/dashboard");
   console.log("HomeEdit PromoContactHead04 OK ");
 }; //H002PromoContactHead02
+
+//H002PromoContacContents
+exports.H002PromoContacContents = async (req, res) => {
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactContents/promoContactContentHead.txt",
+    req.body.promoContactContentHead,
+    function () {},
+  );
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactContents/promoContacContentarea.txt",
+    req.body.promoContactContentTextarea,
+    function () {},
+  );
+
+  await res.redirect("/dashboard");
+  console.log("HomeEdit PromoContactContents OK ");
+}; //H002PromoContacContents
