@@ -124,6 +124,7 @@ exports.H002PromoContactHead02 = async (req, res) => {
   console.log("HomeEdit PromoContactHead02 OK ");
 }; //H002PromoContactHead02
 
+//H002PromoContactHead03
 exports.H002PromoContactHead03 = async (req, res) => {
   await require("fs").writeFile(
     "./public/avatar/Home/H002/promoContactHead03/promoContactHead03Name.txt",
@@ -142,4 +143,25 @@ exports.H002PromoContactHead03 = async (req, res) => {
   );
   await res.redirect("/dashboard");
   console.log("HomeEdit PromoContactHead03 OK ");
+}; //H002promoContactHead03
+
+//H002PromoContactHead04
+exports.H002PromoContactHead04 = async (req, res) => {
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactHead04/promoContactHead04Name.txt",
+    req.body.promoContactHead04Name,
+    function () {},
+  );
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactHead04/promoContactHead04leval.txt",
+    req.body.promoContactHead04leval,
+    function () {},
+  );
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactHead04/promoContactHead04Img.txt",
+    req.file.filename,
+    function () {},
+  );
+  await res.redirect("/dashboard");
+  console.log("HomeEdit PromoContactHead04 OK ");
 }; //H002PromoContactHead02
