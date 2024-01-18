@@ -11,6 +11,7 @@ const {
   H002Promo03,
   H002Promo04,
   H002PromoDetails,
+  H002PromoContactHead01,
 } = require("../controllers/Home/HomePage002");
 
 // Logo Upload
@@ -102,6 +103,19 @@ const uploadH002promoDetails = multer({
   storage: storageH002promoDetails,
 });
 
+// H002 Upload img promo04
+const storageH002promoContactHead01 = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/avatar/Home/H002/promoContactHead01");
+  },
+  filename: function (req, file, callback) {
+    callback(null, "H002promoContactHead01" + ".jpg");
+  },
+});
+const uploadH002promoContactHead01 = multer({
+  storage: storageH002promoContactHead01,
+});
+
 // Home page all details------------------------------------------------------------------------
 router.get("/", home);
 router.post("/addheader", uploadlogo.single("logoimg"), addhaeder); // การแก้ Header
@@ -130,6 +144,13 @@ router.post(
   "/HomeEdit002/promoDetails",
   uploadH002promoDetails.single("promoDetailsImg"),
   H002PromoDetails,
+); // การแก้ H002-promoDetail
+
+//H002 promoContactHeads---------------------------------------------------
+router.post(
+  "/HomeEdit002/promoContactHead01",
+  uploadH002promoContactHead01.single("promoContactHead01Img"),
+  H002PromoContactHead01,
 ); // การแก้ H002-promoDetail
 
 // Products All show------------------------

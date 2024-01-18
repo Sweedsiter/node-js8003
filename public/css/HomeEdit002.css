@@ -5,9 +5,17 @@
 .H002 .promotions > * {
   width: 300px;
 }
+.promoContact {
+  display: flex;
+  flex-wrap: wrap;
+}
 /* media */
 @media only screen and (max-width: 600px) {
   .H002 .promotions > * {
     width: 100%;
+  }
+  .promoContact {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

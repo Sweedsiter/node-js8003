@@ -82,3 +82,24 @@ exports.H002PromoDetails = async (req, res) => {
   await res.redirect("/dashboard");
   console.log("HomeEdit PromoDetails OK ");
 };
+
+// Homepage 02 promotionContaceHead01---------------------------
+exports.H002PromoContactHead01 = async (req, res) => {
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactHead01/promoContactHead01Name.txt",
+    req.body.promoContactHead01Name,
+    function () {},
+  );
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactHead01/promoContactHead01leval.txt",
+    req.body.promoContactHead01leval,
+    function () {},
+  );
+  await require("fs").writeFile(
+    "./public/avatar/Home/H002/promoContactHead01/promoContactHead01Img.txt",
+    req.file.filename,
+    function () {},
+  );
+  await res.redirect("/dashboard");
+  console.log("HomeEdit PromoContactHead01 OK ");
+};
